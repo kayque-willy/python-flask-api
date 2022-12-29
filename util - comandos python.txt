@@ -1,0 +1,35 @@
+--------------------------------- AMBIENTE DE DESENVOLVIMENTO ------------------------------------
+
+> $  py -m venv nome-projeto //--------------// [OBRIGATÓRIO] Cria um ambiente de desenvolvimento python
+
+> $  ./nome-projeto/scripts/activate //--------------// [OBRIGATÓRIO] Executa a o ambiente, irá aparecer (nome-projeto) no terminal
+
+----------------------------------------- FRAMEWORK BACKEND - FLASK -------------------------------------------------
+
+> $  pip install flask //--------------// [OBRIGATÓRIO] Instala o Flask na pasta raiz do projeto
+
+----------------------------------------- BANCO DE DADOS -------------------------------------------------
+
+> $  pip install mysql-connector-python //--------------//  Instala o conector do banco de dados mysql
+
+--------------------------------------- BANCO DE DADOS - ORM -------------------------------------------------
+
+> $  pip install pip install SQLAlchemy //--------------//  Instala a biblioteca de mapeamento relacional (ORM) SQLAlchemy
+
+> $  pip install PyMySQL //--------------//  Instala o driver para conector do banco de dados mysql
+
+----------------------------------------- BANCO DE DADOS - MIGRATIONS -------------------------------------------------
+
+> $  pip install alembic //--------------//  Instala a biblioteca de migração do banco de dados Alembic
+
+> $  alembic init alembic //--------------// [OBRIGATÓRIO] Inicia o ambiente do Alembic
+
+> $  alembic revision -m "nome revisão" //--------------// Cria uma nova migração
+
+> $  alembic upgrade head //--------------// Atualiza as migrações que foram feitas
+
+> $  alembic downgrade -1 //--------------// Faz o downgrade das migrações que foram feitas, o numero representa a quantidade de versões
+
+----------------------------------------- EXECUÇÃO -------------------------------------------------
+
+> $  py nome-arquivo.py //--------------// Executa arquivo python
