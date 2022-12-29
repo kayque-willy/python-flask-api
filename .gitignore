@@ -3,7 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 .vscode/
-/python_flask_api/Scripts/
+Scripts/
 # C extensions
 *.so
 
