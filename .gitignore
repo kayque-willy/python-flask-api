@@ -3,7 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 .vscode/
-
+/python_flask_api/Scripts/
 # C extensions
 *.so
 
@@ -21,6 +21,7 @@ parts/
 sdist/
 var/
 wheels/
+Scripts/
 share/python-wheels/
 *.egg-info/
 .installed.cfg
