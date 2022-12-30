@@ -5,6 +5,7 @@ from python_sql_alchemy.repository.filmes_repository import FilmeRepository
 class FilmeController:
     filme_repository = FilmeRepository()
 
+    # LIST ALL FILMES
     def get_all_filmes(self):
         data = self.filme_repository.select_all()
         filmes = list()
@@ -22,6 +23,22 @@ class FilmeController:
             )
         )
 
+    # GET FILME BY TITULO
+    def get_filme_by_title(self, titulo):
+        data = self.filme_repository.select_by_title(titulo)
+        filme = {
+            "título": data.titulo, 
+            "gênero": data.genero, 
+            "ano": data.ano
+        }
+        return make_response(
+            jsonify(
+                mensagem="Filme", 
+                filme=filme
+            )
+        )
+
+    # CREATE FILME
     def create_filme(self, request):
         filme = request.json
         self.filme_repository.insert(

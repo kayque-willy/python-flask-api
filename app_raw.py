@@ -9,7 +9,12 @@ app = Flask(__name__)
 app.config["JSON_SORT_KEYS"] = False
 
 # ------------------- Rotas e métodos da API -------------------
-# FILMES [GET]
+# FILMES [GET - TITLE]
+@app.route('/cinema/filmes/<titulo>')
+def get_filme_by_title(titulo):
+    return filme_controller.get_filme_by_title(titulo)
+
+# FILMES [GET - LIST]
 @app.route("/cinema/filmes", methods=["GET"])
 def get_all_filmes():
     return filme_controller.get_all_filmes()
