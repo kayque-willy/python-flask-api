@@ -33,7 +33,6 @@ class FilmeRepository:
         with DBConnectionHandler() as db:
             try:
                 data = db.session.query(Filmes).filter(Filmes.titulo == titulo).one()
-                print(data)
                 return data
             except NoResultFound:
                 return None
