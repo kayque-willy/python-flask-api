@@ -1,6 +1,5 @@
 from flask import make_response, jsonify
 from python_sql_alchemy.repository.filmes_repository import FilmeRepository
-from copy import deepcopy
 
 class FilmeController:
     filme_repository = FilmeRepository()
@@ -57,7 +56,7 @@ class FilmeController:
     # GET FILME BY TITULO
     def get_filme_by_title(self, titulo):
         data = self.filme_repository.select_by_title(titulo)
-        
+
         atores = list()
         for ator in data.atores:
             atores.append({
