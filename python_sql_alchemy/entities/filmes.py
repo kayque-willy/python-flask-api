@@ -1,3 +1,4 @@
+import json
 from python_sql_alchemy.config.base import Base
 from sqlalchemy import Column, String, Integer
 from sqlalchemy.orm import relationship
