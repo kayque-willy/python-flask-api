@@ -53,3 +53,12 @@ class FilmeController:
                 filme=filme
             )
         )
+    
+     # Delete
+    def delete_filme(self, titulo):
+        self.filme_repository.delete(titulo)
+        return make_response(
+            jsonify(
+                mensagem='Filme removido com sucesso!'
+            )
+        )

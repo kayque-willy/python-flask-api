@@ -32,7 +32,6 @@ class FilmeRepository:
     def select_by_title(self, titulo):
         with DBConnectionHandler() as db:
             try:
-                print("----------------------------" + titulo)
                 data = db.session.query(Filmes).filter(Filmes.titulo == titulo).one()
                 print(data)
                 return data
