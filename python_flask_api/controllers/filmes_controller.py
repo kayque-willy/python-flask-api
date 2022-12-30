@@ -21,6 +21,21 @@ class FilmeController:
             )
         )
 
+    # UPDATE FILME
+    def update_filme(self, request):
+        filme = request.json
+        self.filme_repository.update(
+            filme['título'], 
+            filme['gênero'], 
+            filme['ano']
+        )
+        return make_response(
+            jsonify(
+                mensagem="Filme", 
+                filme=filme
+            )
+        )
+
     # LIST ALL FILMES
     def get_all_filmes(self):
         data = self.filme_repository.select_all()
