@@ -54,7 +54,7 @@ class FilmeController:
             )
         )
     
-     # Delete
+    # DELETE FILME BY TITULO
     def delete_filme(self, titulo):
         self.filme_repository.delete(titulo)
         return make_response(
