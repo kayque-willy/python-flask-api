@@ -3,6 +3,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import Column, String, Integer
 
+# Arquivo de exemplificação de todo funcionamento do SQLAlchemy
 # ----------------------------- Configurações -----------------------------
 dialect = 'mysql+pymysql' + '://'
 user = 'root' + ':'
