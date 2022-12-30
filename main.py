@@ -2,7 +2,7 @@ import mysql.connector
 from flask import Flask, make_response, jsonify, request
 # from bd import carros
 
-# Conexão com o banco de dados
+# ------------------ Conexão com o banco de dados ------------------
 mydb = mysql.connector.connect(
     host='localhost',
     user='root',
@@ -10,13 +10,11 @@ mydb = mysql.connector.connect(
     database='python-api',
 )
 
-# Flask
+# ----------------------------- Flask -----------------------------
 app = Flask(__name__)
 app.config['JSON_SORT_KEYS'] = False
 
-# Rotas e métodos da API
-
-
+# ------------------ Rotas e métodos da API ------------------
 @app.route('/carros', methods=['GET'])
 def get_carros():
     my_cursor = mydb.cursor()
@@ -55,5 +53,5 @@ def create_carro():
         )
     )
 
-
+# ----------------------------- Executa o Flask -----------------------------
 app.run()
