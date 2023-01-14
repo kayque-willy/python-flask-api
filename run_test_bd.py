@@ -1,6 +1,7 @@
 from python_sql_alchemy.repository.filmes_repository import FilmeRepository 
 from python_sql_alchemy.repository.atores_repository import AtoresRepository
 
+# ----------------- Arquivo de exemplificação da execução dos repositórios -----------------
 # Repositórios
 filmeRepository = FilmeRepository()
 atoresRepository = AtoresRepository()
