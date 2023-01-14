@@ -4,23 +4,19 @@
 
 > $  ./nome-projeto/scripts/activate //--------------// [OBRIGATÓRIO] Executa a o ambiente, irá aparecer (nome-projeto) no terminal
 
------------------------------------------ FRAMEWORK BACKEND - FLASK -------------------------------------------------
+----------------------------------------- INSTALAÇÃO -------------------------------------------------
 
-> $  pip install flask //--------------// [OBRIGATÓRIO] Instala o Flask na pasta raiz do projeto
-
------------------------------------------ BANCO DE DADOS -------------------------------------------------
+> $  pip install flask //--------------// [OBRIGATÓRIO] Instala o framework de backend Flask na pasta raiz do projeto
 
 > $  pip install mysql-connector-python //--------------//  Instala o conector do banco de dados mysql
 
---------------------------------------- BANCO DE DADOS - ORM -------------------------------------------------
-
 > $  pip install pip install SQLAlchemy //--------------//  Instala a biblioteca de mapeamento relacional (ORM) SQLAlchemy
 
-> $  pip install PyMySQL //--------------//  Instala o driver para conector do banco de dados mysql
+> $  pip install alembic //--------------//  Instala a biblioteca de migração do banco de dados Alembic para auxiliar o SQLAlchemy (ORM)
 
------------------------------------------ BANCO DE DADOS - MIGRATIONS -------------------------------------------------
+> $  pip install PyMySQL //--------------//  Instala o driver para conector do banco de dados mysql  (Não é necessário se estiver usando ORM)
 
-> $  pip install alembic //--------------//  Instala a biblioteca de migração do banco de dados Alembic
+----------------------------------------- ALEMBIC (ORM) - MIGRATIONS -------------------------------------------------
 
 > $  alembic init alembic //--------------// [OBRIGATÓRIO] Inicia o ambiente do Alembic
 
@@ -31,5 +27,7 @@
 > $  alembic downgrade -1 //--------------// Faz o downgrade das migrações que foram feitas, o numero representa a quantidade de versões
 
 ----------------------------------------- EXECUÇÃO -------------------------------------------------
+
+> $  py app.py //--------------// Executa o projeto
 
 > $  py nome-arquivo.py //--------------// Executa arquivo python
